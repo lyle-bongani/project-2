@@ -6,37 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./Css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./Css/Style.Css">
+    <link rel="stylesheet" href="./Css/style.css">
 </head>
 
 <body>
-    <!-- this is my header section -->
-    <header class="d-flex justify-content-between align-items-center">
-        <img src="./images/logo.png" alt="logo-image">
-        <div>
-            <ul class="d-flex justify-content-center align-items-center">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a href="#hero" class="header-logo-link"><img src="./images/logo.png" alt="Home" class="header-logo"></a>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="primary-nav" aria-expanded="false"
+                aria-label="Open menu">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+            </button>
+            <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+                <ul class="primary-nav-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#sign-up">Services</a></li>
+                    <li><a href="#testimonail">Blog</a></li>
+                    <li><a href="#newsletter">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <!-- my header section ends here -->
 
     <!-- this is my hero section  -->
-    <section id="hero" class="  d-flex justify-content-center align-items-center ">
+    <section id="hero" class="d-flex justify-content-center align-items-center">
         <div class="hero-inner text-center">
             <h1 class="text-white  ">Lorem ipsum dolor sit amet.</h1>
             <p>Lorem ipsum dolor sit.</p>
@@ -44,18 +40,19 @@
     </section>
     <!-- my hero section ends here  -->
 
+    <main class="page-main">
     <!-- this is my about section  -->
-    <section id="about" class=" bg-light d-flex justify-content-center align-items-center text-center ">
+    <section id="about" class="d-flex justify-content-center align-items-center text-center">
         <div class="about-inner container-fluid d-md-flex justify-content-center align-items-center my-5 ">
-            <div class="about-card-one">
+            <div class="about-card about-card-one">
                 <h4>Lorem, ipsum dolor.</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto libero eum natus minima</p>
             </div>
-            <div class="about-card-two">
+            <div class="about-card about-card-two">
                 <h4>Lorem, ipsum dolor.</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto libero eum natus minima</p>
             </div>
-            <div class="about-card-three">
+            <div class="about-card about-card-three">
                 <h4>Lorem, ipsum dolor.</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto libero eum natus minima</p>
             </div>
@@ -63,93 +60,86 @@
     </section>
     <!-- this is the end of my about section -->
 
-    <!-- this is my sign up section -->
-    <section id="sign-up" class=" container text-center gap-5%">
-        <div class="sign-up-inner" class="d-flex align-items-center text-center my-0-auto mx-0-auto 3">
-            <img class="my-0-auto mx-0-auto" src="./images/appleComputer.jpg" width="300px" alt=" sign-up-image">
-            <h4 class="text-45px text-weight-500 text-#646464">WE DESIGN BEAUTIFUL TEMPLATES.</h4>
-            <p class="text-large text-weight-500 text-#646464 ">We Design Beautiful Templates. Lorem ipsum dolor, sit
-                amet consectetur adipisicing elit. Adipisci
-                excepturi laudantium magni ad incidunt reiciendis delectus in sit veniam cupiditate accusantium animi!
-            </p>
-            <button class="btn btn-warning text-white fw-bolder">SIGN UP NOW!</button>
+    <!-- sign up / CTA section -->
+    <section id="sign-up" class="sign-up-section" aria-labelledby="sign-up-heading">
+        <div class="sign-up-inner">
+            <img class="sign-up-img" src="./images/appleComputer.jpg"
+                alt="Workspace with laptop, coffee, and plant on a desk">
+            <h2 id="sign-up-heading" class="sign-up-heading">WE DESIGN BEAUTIFUL TEMPLATES.</h2>
+            <p class="sign-up-lead">We Design Beautiful Templates. Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Adipisci excepturi laudantium magni ad incidunt reiciendis delectus in sit veniam cupiditate
+                accusantium animi!</p>
+            <button type="button" class="sign-up-btn">SIGN UP NOW!</button>
         </div>
     </section>
     <!-- this is the end of my sign-up section  -->
 
     <!-- this is my testimonial section -->
-    <section id="testimonail" class="d-flex justify-content-center align-items-center text-center my-5">
-        <div class="testimonail-inner container">
-            <h3>OUR HAPPY CLIENTS</h3>
-            <div class="testimonail-card bg-light p-2 d-md-flex gap-5">
-                <div class="testimonail-card-one">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt,
-                        suscipit blanditiis.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, ducimus ex laborum deleniti
-                        voluptate excepturi repellendus</p>
-                    <h4>@Jane Doe</h4>
+    <section id="testimonail" class="my-5">
+        <div class="testimonail-inner container-fluid px-0">
+            <h3 class="testimonail-heading text-center">OUR HAPPY CLIENTS</h3>
+            <div class="testimonail-card bg-light d-flex flex-column flex-md-row gap-4 gap-md-5">
+                <div class="testimonail-card-one flex-fill text-start">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt
+                        suscipit blanditiis harum ducimus ex laborum deleniti voluptate excepturi repellendus.</p>
+                    <h4 class="testimonail-author">@Jane Doe</h4>
                 </div>
-                <div class="testimonail-card-two">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt,
-                        suscipit blanditiis.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, ducimus ex laborum deleniti
-                        voluptate excepturi repellendus</p>
-                    <h4>@Jane Doe</h4>
+                <div class="testimonail-card-two flex-fill text-start">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt
+                        suscipit blanditiis harum ducimus ex laborum deleniti voluptate excepturi repellendus.</p>
+                    <h4 class="testimonail-author">@Jane Doe</h4>
                 </div>
-                <div class="testimonail-card-three">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt,
-                        suscipit blanditiis.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, ducimus ex laborum deleniti
-                        voluptate excepturi repellendus</p>
-                    <h4>@Jane Doe</h4>
+                <div class="testimonail-card-three flex-fill text-start">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facere ex maiores earum sunt
+                        suscipit blanditiis harum ducimus ex laborum deleniti voluptate excepturi repellendus.</p>
+                    <h4 class="testimonail-author">@Jane Doe</h4>
                 </div>
             </div>
 
         </div>
     </section>
     <!-- this is the end of my testimonial section  -->
+    </main>
 
-    <!-- this is my news-letter section -->
-    <section id="newsletter" class="d-flex justify-content-center align-items-center text-center p-7 bg-warning  mt-10  gap-5  ">
-        <div class="news-letter-inner container-fluid  mb-2 my-5">
-            <h3 class="text-white text-xx-large text-center">SUBSCRIBE TO OUR NEWSLETER</h3>
-            <div id="form">
-            <form action="#" class="d-grid gap-2 d-md-flex justify-content-center align-items-center m-2 ">
-                    <input type="text" placeholder="Name" class="inputName col-11 col-md-4 ms-2 ms-md-0 p-2 fw-light ">
-                    <input type="email" placeholder="Email" class=" inputName2 col-md-4 ms-2 ms-md-0  p-2-4 fw-light p-2  ">  
-                <input type="button" value="SUBSCRIBE" class="btn btn-dark d-md-flex justify-content-center align-items-center text-x-large fw-bolder p-2 w-50">
+    <!-- newsletter subscribe banner (full-bleed, outside page-main) -->
+    <section id="newsletter" class="newsletter-section" aria-labelledby="newsletter-heading">
+        <div class="newsletter-inner">
+            <h2 id="newsletter-heading" class="newsletter-heading">SUBSCRIBE TO OUR NEWSLETTER.</h2>
+            <form class="newsletter-form" action="#" method="post">
+                <div class="newsletter-fields-pill">
+                    <input type="text" name="name" class="newsletter-input newsletter-input-name" placeholder="name"
+                        autocomplete="name" aria-label="Name">
+                    <span class="newsletter-field-divider" aria-hidden="true"></span>
+                    <input type="email" name="email" class="newsletter-input newsletter-input-email" placeholder="email"
+                        autocomplete="email" aria-label="Email">
+                </div>
+                <button type="submit" class="newsletter-btn">Subscribe</button>
             </form>
-        </div>
         </div>
     </section>
     <!-- this is the end of my news-letter section  -->
-    <footer class="d-flex justify-content-center align-items-center ">
-        <div class="footer-inner d-flex justify-content-center align-items-center flex-direction-column my-2">
-            <img src="./images/logo.png" alt="logo-image" class="img">
-            <ul class="d-flex justify-content-center align-items-center">
-                <li>
-                    <a href="#">Company</a>
-                </li>
-                <li>
-                    <a href="#">Location</a>
-                </li>
-                <li>
-                    <a href="#">Help</a>
-                </li>
-                <li>
-                    <a href="#">Advertise</a>
-                </li>
-                <li>
-                    <a href="#">Terms</a>
-                </li>
-                <li>
-                    <a href="#">Privacy</a>
-                </li>
-            </ul>
-            <hr>
-            <span>@2024 Lorem ipsum.</span>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <img src="./images/logo.png" alt="Sprout Coding" class="footer-logo">
+            <nav class="footer-nav" aria-label="Footer">
+                <ul class="footer-nav-list">
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Advertise</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+            <div class="footer-divider" aria-hidden="true"></div>
+            <p class="footer-copyright">© <span id="footer-year">2026</span> sproutcoding.org - All Rights Reserved</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./js/animations.js" defer></script>
+    <script src="./js/responsive.js" defer></script>
 </body>
 
 </html>
