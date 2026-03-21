@@ -7,14 +7,24 @@
 header {
   position: absolute;
   width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   top: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+  z-index: 10;
+  box-sizing: border-box;
 }
 header div ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 7%;
   list-style: none;
   font-size: 13px;
-  flex-direction: rtl;
 }
 header div ul li a {
   text-decoration: none;
